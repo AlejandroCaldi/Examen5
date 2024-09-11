@@ -2,7 +2,7 @@
 import '../styles/style.css'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Producto from '../components/Producto.astro';
+import Contacto from '../components/Contacto.astro';
 import CookiePolicy from '../components/CookiePolicy.astro';
 import Productos from '../components/Productos.astro';
 
@@ -59,7 +59,7 @@ const productos =[["/src/images/product1.webp","Tecla Enter Catártica","19.99�
             <p>Somos una tienda online dedicada a ofrecer los mejores productos para nuestros clientes. Con años de
                 experiencia en el sector, nos enorgullece ofrecer una experiencia de compra única.</p>
         </section>
-        <section id="contact">
+        <!-- <section id="contact">
             <h2>Contacto</h2>
             <form id="contactForm">
                 <label for="name">Nombre:</label>
@@ -70,7 +70,9 @@ const productos =[["/src/images/product1.webp","Tecla Enter Catártica","19.99�
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
-        </section>
+        </section> -->
+
+        <Contacto />
     </main>
     <Footer>
 
