@@ -1,0 +1,284 @@
+---
+import '../styles/style.css'
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B2B de eletrónica. Un sitio pensado para gente que busca artículos de electrónica recomendados 
+    por influencers y youtubers asociados con el tema.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tienda Online</title>
+
+</head>
+
+
+<body>
+    <!-- Cookie banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="row">
+            <div class="col-xl-10 mx-auto">
+                <div class="paper">
+                    <header class="text-center">
+                        <h2 class="m-auto">POLÍTICA DE COOKIES</h2>
+                        <h4><span class="blanc-space ng-binding">rubenpop.com</span></h4>
+                    </header>
+                    <div>
+                        <p>El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas
+                            cantidades de información que se almacenan en el navegador utilizado por cada Usuario —en
+                            los distintos dispositivos que pueda utilizar para navegar— para que el servidor recuerde
+                            cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las
+                            cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de
+                            navegación.</p>
+                        <p>Las cookies son procedimientos automáticos de recogida de información relativa a las
+                            preferencias determinadas por el Usuario durante su visita al Sitio Web con el fin de
+                            reconocerlo como Usuario, y personalizar su experiencia y el uso del Sitio Web, y pueden
+                            también, por ejemplo, ayudar a identificar y resolver errores.</p>
+                        <p>La información recabada a través de las cookies puede incluir la fecha y hora de visitas al
+                            Sitio Web, las páginas visionadas, el tiempo que ha estado en el Sitio Web y los sitios
+                            visitados justo antes y después del mismo. Sin embargo, ninguna cookie permite que esta
+                            misma pueda contactarse con el número de teléfono del Usuario o con cualquier otro medio de
+                            contacto personal. Ninguna cookie puede extraer información del disco duro del Usuario o
+                            robar información personal. La única manera de que la información privada del Usuario forme
+                            parte del archivo Cookie es que el usuario dé personalmente esa información al servidor.</p>
+                        <p>Las cookies que permiten identificar a una persona se consideran datos personales. Por tanto,
+                            a las mismas les será de aplicación la Política de Privacidad anteriormente descrita. En
+                            este sentido, para la utilización de las mismas será necesario el consentimiento del
+                            Usuario. Este consentimiento será comunicado, en base a una elección auténtica, ofrecido
+                            mediante una decisión afirmativa y positiva, antes del tratamiento inicial, removible y
+                            documentado.</p>
+                        <div ng-show="hasPersonalCookies == 'Sí'" class="">
+                            <h4>Cookies propias</h4>
+                            <p>Son aquellas cookies que son enviadas al ordenador o dispositivo del Usuario y
+                                gestionadas exclusivamente por <span class="blanc-space ng-binding">Sitio de venta de
+                                    Produtcos Electrónicos</span> para el mejor funcionamiento del Sitio Web. La
+                                información que se recaba se emplea para mejorar la calidad del Sitio Web y su Contenido
+                                y su experiencia como Usuario. Estas cookies permiten reconocer al Usuario como
+                                visitante recurrente del Sitio Web y adaptar el contenido para ofrecerle contenidos que
+                                se ajusten a sus preferencias.</p>
+                        </div>
+                        <div class="thirdCookies" ng-show="hasThirdCookies == 'Sí'">
+                            <h4>Cookies de terceros</h4>
+                            <p>Son cookies utilizadas y gestionadas por entidades externas que proporcionan a <span
+                                    class="blanc-space ng-binding">Sitio de venta de Produtcos Electrónicos</span>
+                                servicios solicitados por este mismo para mejorar el Sitio Web y la experiencia del
+                                usuario al navegar en el Sitio Web. Los principales objetivos para los que se utilizan
+                                cookies de terceros son la obtención de estadísticas de accesos y analizar la
+                                información de la navegación, es decir, cómo interactúa el Usuario con el Sitio Web.</p>
+                            <p>La información que se obtiene se refiere, por ejemplo, al número de páginas visitadas, el
+                                idioma, el lugar a la que la dirección IP desde el que accede el Usuario, el número de
+                                Usuarios que acceden, la frecuencia y reincidencia de las visitas, el tiempo de visita,
+                                el navegador que usan, el operador o tipo de dispositivo desde el que se realiza la
+                                visita. Esta información se utiliza para mejorar el Sitio Web, y detectar nuevas
+                                necesidades para ofrecer a los Usuarios un Contenido y/o servicio de óptima calidad. En
+                                todo caso, la información se recopila de forma anónima y se elaboran informes de
+                                tendencias del Sitio Web sin identificar a usuarios individuales.</p>
+                            <p>Puede obtener más información sobre las cookies, la información sobre la privacidad, o
+                                consultar la descripción del tipo de cookies que se utiliza, sus principales
+                                características, periodo de expiración, etc. en el siguiente(s) enlace(s):</p>
+                            <pre><span class="blanc-space"><p class="text-wrap ng-binding"></p></span></pre>
+                            <p>La(s) entidad(es) encargada(s) del suministro de cookies podrá(n) ceder esta información
+                                a terceros, siempre y cuando lo exija la ley o sea un tercero el que procese esta
+                                información para dichas entidades.</p>
+                        </div>
+                        <div ng-show="hasSocial == 'Sí'" class="">
+                            <h4>Cookies de redes sociales</h4>
+                            <p><span class="blanc-space ng-binding">Sitio de venta de Produtcos Electrónicos</span>
+                                incorpora plugins de redes sociales, que permiten acceder a las mismas a partir del
+                                Sitio Web. Por esta razón, las cookies de redes sociales pueden almacenarse en el
+                                navegador del Usuario. Los titulares de dichas redes sociales disponen de sus propias
+                                políticas de protección de datos y de cookies, siendo ellos mismos, en cada caso,
+                                responsables de sus propios ficheros y de sus propias prácticas de privacidad. El
+                                Usuario debe referirse a las mismas para informarse acerca de dichas cookies y, en su
+                                caso, del tratamiento de sus datos personales. Únicamente a título informativo se
+                                indican a continuación los enlaces en los que se pueden consultar dichas políticas de
+                                privacidad y/o de cookies:</p>
+                            <ul>
+                                <li>Facebook: <a class="text-info"
+                                        href="https://www.facebook.com/policies/cookies/" target="_blank">https://www.facebook.com/policies/cookies/</a>
+                                </li>
+                                <li>Twitter: <a class="text-info"
+                                        href="https://twitter.com/es/privacy" target="_blank">https://twitter.com/es/privacy</a></li>
+                                <li>Instagram: <a class="text-info"
+                                        href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank">https://help.instagram.com/1896641480634370?ref=ig</a>
+                                </li>
+                                <li>YouTube: <a class="text-info"
+                                        href="https://policies.google.com/privacy?hl=es-419&amp;gl=mx" target="_blank">https://policies.google.com/privacy?hl=es-419&amp;gl=mx</a>
+                                </li>
+                                <li>Pinterest: <a class="text-info"
+                                        href="https://policy.pinterest.com/es/privacy-policy" target="_blank">https://policy.pinterest.com/es/privacy-policy</a>
+                                </li>
+                                <li>LinkedIn: <a class="text-info"
+                                        href="https://www.linkedin.com/legal/cookie-policy?trk=hp-cookies" target="_blank">https://www.linkedin.com/legal/cookie-policy?trk=hp-cookies </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4>Deshabilitar, rechazar y eliminar cookies</h4>
+                        <p>El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcialmente—
+                            instaladas en su dispositivo mediante la configuración de su navegador (entre los que se
+                            encuentran, por ejemplo, Chrome, Firefox, Safari, Explorer). En este sentido, los
+                            procedimientos para rechazar y eliminar las cookies pueden diferir de un navegador de
+                            Internet a otro. En consecuencia, el Usuario debe acudir a las instrucciones facilitadas por
+                            el propio navegador de Internet que esté utilizando. En el supuesto de que rechace el uso de
+                            cookies —total o parcialmente— podrá seguir usando el Sitio Web, si bien podrá tener
+                            limitada la utilización de algunas de las prestaciones del mismo.</p>
+                        <p>Este documento de Política de Cookies ha sido creado mediante el generador de <a
+                                class="text-body text-decoration-none"
+                                href="https://textos-legales.edgartamarit.com/" target="_blank">plantilla de política de cookies web
+                                gratis</a> online el día 10/09/2024.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="acceptCookiesButton">Aceptar cookies</button>X
+    </div>
+
+    <!-- Overlay for blurring background -->
+    <div id="overlay" class="overlay"></div>
+
+    <header>
+        <h1>Tienda Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Bienvenidos a Nuestra Tienda</h2>
+            <p>Los mejores productos al mejor precio.</p>
+        </section>
+        <section id="products">
+            <h2>Productos Destacados</h2>
+            <div class="product" id="product1">
+                <div class="centrado">
+                    <img src="/src/images/product1.webp" alt="Producto 1">
+                </div>
+                <h3>Producto 1</h3>
+                <p>Descripción detallada del producto 1. Es un producto de alta calidad.</p>
+                <p class="price">Precio: 19.99€</p>
+                <button onclick="addToCart('product1')">Añadir al carrito</button>
+            </div>
+            <div class="product" id="product2">
+                <div class="centrado">
+                    <img src="/src/images/product2.webp" alt="Producto 2">
+                </div>
+                <h3>Producto 2</h3>
+                <p>Descripción detallada del producto 2. Es muy popular entre nuestros clientes.</p>
+                <p class="price">Precio: 29.99€</p>
+                <button onclick="addToCart('product2')">Añadir al carrito</button>
+            </div>
+            <div class="product" id="product3">
+                <div class="centrado">
+                    <img src="/src/images/product3.webp" alt="Producto 3">
+                </div>
+                <h3>Producto 3</h3>
+                <p>Descripción detallada del producto 3. Ideal para regalar.</p>
+                <p class="price">Precio: 39.99€</p>
+                <button onclick="addToCart('product3')">Añadir al carrito</button>
+            </div>
+        </section>
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una tienda online dedicada a ofrecer los mejores productos para nuestros clientes. Con años de
+                experiencia en el sector, nos enorgullece ofrecer una experiencia de compra única.</p>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+    // Function to show the cookie banner
+    function showCookieBanner() {
+        console.log('showCookieBanner function called');
+        const cookieBanner = document.getElementById('cookieBanner');
+        const overlay = document.getElementById('overlay');
+        if (cookieBanner && overlay) {
+            cookieBanner.style.display = 'block';
+            overlay.style.display = 'block';
+        } else {
+            console.error('Cookie banner or overlay element not found');
+        }
+    }
+
+    // Function to hide the cookie banner
+    function acceptCookies() {
+        console.log('acceptCookies function called');
+        const cookieBanner = document.getElementById('cookieBanner');
+        const overlay = document.getElementById('overlay');
+        if (cookieBanner && overlay) {
+            cookieBanner.style.display = 'none';
+            overlay.style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        } else {
+            console.error('Cookie banner or overlay element not found');
+        }
+    }
+
+    // Function to check if cookies have been accepted
+    function checkCookiesAcceptance() {
+        console.log('checkCookiesAcceptance function called');
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+        if (!cookiesAccepted) {
+            showCookieBanner();
+        }
+    }
+
+    // Add event listener to the button
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('acceptCookiesButton');
+        if (button) {
+            button.addEventListener('click', acceptCookies);
+        } else {
+            console.error('Accept cookies button not found');
+        }
+
+        // Run the check when the page loads
+        checkCookiesAcceptance();
+
+        // Validación y envío del formulario de contacto
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Previene el envío del formulario
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        // Aquí iría el código para enviar el formulario al servidor
+        alert('Formulario enviado con éxito');
+    } else {
+        alert('Por favor, rellene todos los campos');
+    }
+});
+    });
+</script>
+
+
+
+</body>
+
+</html>
