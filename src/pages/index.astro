@@ -126,20 +126,21 @@ const productos =[["/src/images/product1.webp","Tecla Enter Catártica","19.99�
         checkCookiesAcceptance();
 
         // Validación y envío del formulario de contacto
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Previene el envío del formulario
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Previene el envío del formulario
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    if (name && email && message) {
-        // Aquí iría el código para enviar el formulario al servidor
-        alert('Formulario enviado con éxito');
-    } else {
-        alert('Por favor, rellene todos los campos');
-    }
-});
+        if (name && email && message) {
+            // Aquí iría el código para enviar el formulario al servidor
+            alert('Formulario enviado con éxito');
+        } else {
+            alert('Por favor, rellene todos los campos');
+        }
+        });
     });
+    
 </script>
 
 
