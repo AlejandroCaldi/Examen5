@@ -1,0 +1,21 @@
+---
+import '../styles/style.css';
+import Producto from '../components/Producto.astro';
+
+interface Props {
+    datos: string[]
+}
+
+
+const {datos} = Astro.props;
+
+---
+
+{datos.map(p => (
+    <Producto 
+        imagen={p[0]} 
+        alt={p[1]}
+        precio={p[2]}
+        descripcion={p[3]}
+    />
+))}
