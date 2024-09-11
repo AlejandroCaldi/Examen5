@@ -7,7 +7,7 @@ Utilizando la herramienta otorgada por el navegador Chrome “LIGHTHOUSE” dete
 - Previo al rediseño de los puntos siguientes, la comprobación es que el sitio es efectivo, se busca cumplir con algunas recomendaciones,
   pero muchas de ellas van del lado del servidor.
 
-![Primer choque contra Lighthouse](Lighthouse.png 'LightHouse luego de retoques para cumplir con las consignas del ejercicio.')
+![Primer choque contra Lighthouse](src/images/Lighthouse.png 'LightHouse luego de retoques para cumplir con las consignas del ejercicio.')
 
 # 1- Clonar el repositorio de GitHub: https://github.com/Thibor82/uf1306
 

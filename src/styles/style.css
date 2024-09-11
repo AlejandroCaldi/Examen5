@@ -132,6 +132,7 @@ footer {
 /* Style for the cookie banner */
 .cookie-banner {
   display: flex;
+  flex-direction: column;
   /* Hidden by default */
   position: fixed;
   bottom: 20px;

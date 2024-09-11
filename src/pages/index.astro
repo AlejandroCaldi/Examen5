@@ -1,5 +1,23 @@
 ---
 import '../styles/style.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Producto from '../components/Producto.astro';
+
+const links = [['#home', 'Inicio'],
+              ['#products', 'Productos'],
+			  ['#about', 'Sobre Nosotros'],
+			  ['#contact','Contacto']]
+
+const producto =[["/src/images/product1.webp","Tecla Enter Catártica","19.99€",
+                 "Descripción detallada del producto 1. Producto altamente golpeable."],
+                
+                 ["/src/images/product2.webp","GameBoy para el prepuber vitalicio","39.99€",
+                 "Gameboy com MAME de 128bits incorporado a la ROM"],
+                 
+                 ["/src/images/product3.webp","Smartwatch Cuqui","59.99€",
+                 "Compatible con DOS 6.1 y Haiku OS"],
+                 ]
 ---
 
 
@@ -136,58 +154,36 @@ import '../styles/style.css'
                 </div>
             </div>
         </div>
-        <button id="acceptCookiesButton">Aceptar cookies</button>X
+        <button id="acceptCookiesButton">Aceptar</button>
     </div>
+
 
     <!-- Overlay for blurring background -->
     <div id="overlay" class="overlay"></div>
 
-    <header>
-        <h1>Tienda Online</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#products">Productos</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#contact">Contacto</a></li>
-
-            </ul>
-        </nav>
-    </header>
+    <Header links{links}/>
     <main>
         <section id="home">
             <h2>Bienvenidos a Nuestra Tienda</h2>
             <p>Los mejores productos al mejor precio.</p>
         </section>
         <section id="products">
-            <h2>Productos Destacados</h2>
-            <div class="product" id="product1">
-                <div class="centrado">
-                    <img src="/src/images/product1.webp" alt="Producto 1">
-                </div>
-                <h3>Producto 1</h3>
-                <p>Descripción detallada del producto 1. Es un producto de alta calidad.</p>
-                <p class="price">Precio: 19.99€</p>
-                <button onclick="addToCart('product1')">Añadir al carrito</button>
-            </div>
-            <div class="product" id="product2">
-                <div class="centrado">
-                    <img src="/src/images/product2.webp" alt="Producto 2">
-                </div>
-                <h3>Producto 2</h3>
-                <p>Descripción detallada del producto 2. Es muy popular entre nuestros clientes.</p>
-                <p class="price">Precio: 29.99€</p>
-                <button onclick="addToCart('product2')">Añadir al carrito</button>
-            </div>
-            <div class="product" id="product3">
-                <div class="centrado">
-                    <img src="/src/images/product3.webp" alt="Producto 3">
-                </div>
-                <h3>Producto 3</h3>
-                <p>Descripción detallada del producto 3. Ideal para regalar.</p>
-                <p class="price">Precio: 39.99€</p>
-                <button onclick="addToCart('product3')">Añadir al carrito</button>
-            </div>
+            <h2>Productos Destacados</h2>            
+            <Producto imagen={producto[0][0]} 
+                      alt={producto[0][1]}
+                      precio={producto[0][2]}
+                      descripcion={producto[0][3]}/>
+
+            <Producto imagen={producto[1][0]} 
+                        alt={producto[1][1]}
+                        precio={producto[1][2]}
+                        descripcion={producto[1][3]}/>
+
+            <Producto imagen={producto[2][0]} 
+                        alt={producto[2][1]}
+                        precio={producto[2][2]}
+                        descripcion={producto[2][3]}/>
+            
         </section>
         <section id="about">
             <h2>Sobre Nosotros</h2>
@@ -207,9 +203,7 @@ import '../styles/style.css'
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
-    </footer>
+    <Footer>
 
     <script>
     // Function to show the cookie banner

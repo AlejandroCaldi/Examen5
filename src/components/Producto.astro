@@ -1,0 +1,62 @@
+---
+import '../styles/style.css'
+
+interface Props {
+    imagen: string,
+    alt: string,
+    precio: string,
+    descripcion: string
+}
+
+const {imagen, alt, precio, descripcion} = Astro.props;
+---
+
+
+<div class="product" id="product1">
+    <div class="centrado">
+        <img src={imagen} alt={alt}>
+    </div>
+    <h3>{alt}</h3>
+    <p>{descripcion}</p>
+    <p class="price">Precio: {precio}</p>
+    <button onclick="addToCart('product1')">Añadir al carrito</button>
+</div>
+
+<style>
+        .product {
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    }
+
+
+    .centrado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    .vertical {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .horizontal {
+    display: flex;
+    flex-direction: row;
+    }
+
+        .price {
+    font-weight: bold;
+    color: #e44d26;
+    }
+</style>

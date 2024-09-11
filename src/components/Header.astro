@@ -1,0 +1,63 @@
+---
+import '../styles/style.css'
+
+
+interface Props {
+    links: string[]
+}
+
+const {links} = Astro.props;
+---
+
+<h1 class="horizontal">Tienda Online</h1>
+
+
+<nav class="horizontal header">
+
+    <div class="horizontal">
+        {links.map(item => (
+            <a class="nav" href={item[0]}> {item[1]} </a>
+        ))}
+
+        </div>
+
+<style>
+
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(134, 121, 121);
+  color: #black;
+  padding: 15px 0;
+  justify-content: center;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav {
+  list-style: none;
+  padding: 0;
+}
+
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 28px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+</style>
